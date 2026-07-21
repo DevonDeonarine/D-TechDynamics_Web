@@ -1,0 +1,160 @@
+{% extends "layouts/base.html" %}
+{% from "components/icon.html" import icon %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/home.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero__inner">
+      <span class="hero__eyebrow">Technology Solutions &middot; Cybersecurity &middot; Software</span>
+      <h1 class="hero__title">Forged in Fire. <span class="accent">Protected by Code.</span></h1>
+      <p class="hero__subtitle">
+        {{ company_name }} designs, builds, and secures the systems modern
+        businesses run on — from custom software and cloud infrastructure to
+        enterprise-grade cybersecurity.
+      </p>
+      <div class="hero__actions">
+        <a href="{{ url_for('main.contact') }}" class="btn btn-primary">Request Consultation</a>
+        <a href="{{ url_for('main.portfolio') }}" class="btn btn-outline">View Our Work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Company Introduction -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="intro">
+      <div>
+        <h2 class="intro__title">Engineering Built on Precision and Protection</h2>
+        <p>
+          {{ company_name }} partners with organizations that can't afford to
+          treat security as an afterthought. We combine deep technical
+          expertise with a disciplined engineering process, so every system
+          we build is fast, maintainable, and hardened from day one.
+        </p>
+        <p>
+          Whether you need a new platform built from scratch, existing
+          infrastructure modernized, or a dedicated security review, our team
+          works as an extension of yours — not a black box.
+        </p>
+      </div>
+      <div class="intro__stats glass-panel">
+        <div class="intro__stat">
+          <span class="intro__stat-value">6</span>
+          <span class="intro__stat-label">Core Disciplines</span>
+        </div>
+        <div class="intro__stat">
+          <span class="intro__stat-value">100%</span>
+          <span class="intro__stat-label">Custom Built</span>
+        </div>
+        <div class="intro__stat">
+          <span class="intro__stat-value">24/7</span>
+          <span class="intro__stat-label">Support Access</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Overview -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-header__eyebrow">What We Do</span>
+      <h2 class="section-header__title">Full-Spectrum Technology Services</h2>
+      <p class="section-header__subtitle">
+        From securing your network to building the software that runs your
+        business, our services are designed to work together.
+      </p>
+    </div>
+
+    <div class="card-grid">
+      {% for service in services %}
+      <div class="service-card glass-panel">
+        <div class="service-card__icon">{{ icon(service.icon) }}</div>
+        <h3 class="service-card__title">{{ service.title }}</h3>
+        <p class="service-card__summary">{{ service.summary }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="section__cta">
+      <a href="{{ url_for('main.services') }}" class="btn btn-outline">
+        Explore All Services {{ icon('arrow-right') }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose D-Tech -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-header__eyebrow">Why {{ company_name }}</span>
+      <h2 class="section-header__title">Built Different, By Design</h2>
+    </div>
+
+    <div class="diff-grid">
+      {% for item in differentiators %}
+      <div class="diff-card glass-panel">
+        <div class="diff-card__icon">{{ icon('check') }}</div>
+        <h3 class="diff-card__title">{{ item.title }}</h3>
+        <p class="diff-card__summary">{{ item.summary }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Featured Projects -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-header__eyebrow">Featured Work</span>
+      <h2 class="section-header__title">Recent Engagements</h2>
+    </div>
+
+    <div class="project-grid">
+      {% for project in featured_projects %}
+      <div class="project-card glass-panel">
+        <div class="project-card__media"></div>
+        <div class="project-card__body">
+          <span class="project-card__category">{{ project.category }}</span>
+          <h3 class="project-card__title">{{ project.title }}</h3>
+          <p class="project-card__summary">{{ project.summary }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="section__cta">
+      <a href="{{ url_for('main.portfolio') }}" class="btn btn-outline">
+        View Full Portfolio {{ icon('arrow-right') }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band glass-panel">
+      <h2 class="cta-band__title">Ready to Build Something Resilient?</h2>
+      <p class="cta-band__subtitle">
+        Tell us about your project and we'll get back to you with next steps
+        — no obligation, no sales script.
+      </p>
+      <div class="cta-band__actions">
+        <a href="{{ url_for('main.contact') }}" class="btn btn-primary">Request Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

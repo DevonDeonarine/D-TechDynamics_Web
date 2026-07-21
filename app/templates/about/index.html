@@ -1,0 +1,107 @@
+{% extends "layouts/base.html" %}
+{% from "components/icon.html" import icon %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/about.css') }}">
+{% endblock %}
+
+{% block content %}
+
+{% set title = "About " + company_name %}
+{% set eyebrow = "Our Story" %}
+{% set subtitle = "A technology partner built on precision engineering and an unwavering commitment to security." %}
+{% include "components/page_header.html" %}
+
+<!-- Story -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="story">
+      <div>
+        <h2 class="story__title">Where D-Tech Dynamics Started</h2>
+        <p>
+          {{ company_name }} was founded on a simple observation: too many
+          technology providers treat security as a feature to bolt on at the
+          end, rather than a foundation to build from. We set out to do it
+          differently — engineering every system, from the first line of
+          code, to withstand real-world threats.
+        </p>
+        <p>
+          Today, {{ company_name }} works across cybersecurity, custom
+          software, cloud infrastructure, and IT strategy — but the founding
+          principle hasn't changed. We build things that are meant to last,
+          and we protect them like they're our own.
+        </p>
+      </div>
+      <div class="story__mission glass-panel">
+        <span class="story__mission-label">Our Mission</span>
+        <p class="story__mission-text">
+          To give organizations technology they can trust — engineered with
+          the discipline of a security team and the craftsmanship of a
+          software studio.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Values -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-header__eyebrow">What We Stand For</span>
+      <h2 class="section-header__title">Our Core Values</h2>
+    </div>
+
+    <div class="diff-grid">
+      {% for value in values %}
+      <div class="diff-card glass-panel">
+        <div class="diff-card__icon">{{ icon(value.icon) }}</div>
+        <h3 class="diff-card__title">{{ value.title }}</h3>
+        <p class="diff-card__summary">{{ value.summary }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-header__eyebrow">Leadership</span>
+      <h2 class="section-header__title">The Team Behind the Work</h2>
+      <p class="section-header__subtitle">
+        A senior team with direct hands-on involvement in every engagement.
+      </p>
+    </div>
+
+    <div class="team-grid">
+      {% for member in team %}
+      <div class="team-card glass-panel">
+        <div class="team-card__avatar">{{ member.initials }}</div>
+        <h3 class="team-card__name">{{ member.name }}</h3>
+        <span class="team-card__role">{{ member.role }}</span>
+        <p class="team-card__bio">{{ member.bio }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band glass-panel">
+      <h2 class="cta-band__title">Want to Work With Us?</h2>
+      <p class="cta-band__subtitle">
+        Tell us what you're building or protecting, and we'll tell you
+        exactly how we'd approach it.
+      </p>
+      <div class="cta-band__actions">
+        <a href="{{ url_for('main.contact') }}" class="btn btn-primary">Request Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

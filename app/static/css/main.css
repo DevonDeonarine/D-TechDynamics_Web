@@ -1,0 +1,9 @@
+/* ==========================================================================
+   D-Tech Dynamics — Main Stylesheet
+   Import order matters: tokens -> base -> components -> page-specific.
+   ========================================================================== */
+
+@import url("variables.css");
+@import url("base.css");
+@import url("components.css");
+@import url("shared.css");

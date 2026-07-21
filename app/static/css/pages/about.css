@@ -1,0 +1,100 @@
+/* ==========================================================================
+   About Page
+   ========================================================================== */
+
+/* ---- Story ---- */
+.story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .story {
+    grid-template-columns: 1fr;
+  }
+}
+
+.story__title {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  margin-bottom: 16px;
+}
+
+.story__mission {
+  padding: 32px;
+}
+
+.story__mission-label {
+  display: inline-block;
+  color: var(--color-cyan);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.story__mission-text {
+  font-size: 1.05rem;
+  color: var(--color-text);
+  margin-bottom: 0;
+}
+
+/* ---- Team ---- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 960px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.team-card {
+  padding: 28px;
+  text-align: center;
+}
+
+.team-card__avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-brand);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.team-card__name {
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.team-card__role {
+  display: block;
+  color: var(--color-cyan);
+  font-size: 0.82rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+
+.team-card__bio {
+  font-size: 0.88rem;
+  margin-bottom: 0;
+}

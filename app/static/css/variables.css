@@ -1,0 +1,53 @@
+/* ==========================================================================
+   D-Tech Dynamics — Design Tokens
+   Palette derived from brand mark: dragon red + circuit cyan on near-black.
+   ========================================================================== */
+
+:root {
+  /* Brand colors */
+  --color-cyan: #16d9e8;
+  --color-cyan-bright: #5ff2ff;
+  --color-cyan-dim: #0b7f8c;
+  --color-red: #e21f2b;
+  --color-red-bright: #ff4d4d;
+  --color-red-dim: #7a1017;
+
+  /* Neutrals */
+  --color-bg: #06080b;
+  --color-bg-alt: #0a0d12;
+  --color-panel: rgba(18, 24, 32, 0.6);
+  --color-panel-solid: #10141a;
+  --color-border: rgba(22, 217, 232, 0.18);
+  --color-border-strong: rgba(22, 217, 232, 0.4);
+
+  --color-text: #e8f1f4;
+  --color-text-muted: #93a5ac;
+  --color-text-faint: #5c6b72;
+
+  /* Gradients */
+  --gradient-brand: linear-gradient(90deg, var(--color-red) 0%, var(--color-cyan) 100%);
+  --gradient-glass: linear-gradient(160deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
+
+  /* Glow / shadow */
+  --glow-cyan: 0 0 24px rgba(22, 217, 232, 0.25);
+  --glow-red: 0 0 24px rgba(226, 31, 43, 0.25);
+  --shadow-panel: 0 8px 32px rgba(0, 0, 0, 0.45);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Type */
+  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-heading: "Rajdhani", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  /* Layout */
+  --container-max: 1200px;
+  --nav-height: 76px;
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 150ms var(--ease-standard);
+  --transition-base: 250ms var(--ease-standard);
+}

@@ -1,0 +1,28 @@
+<nav class="navbar">
+  <div class="navbar__inner">
+    <a href="{{ url_for('main.index') }}" class="navbar__brand">
+      <img class="navbar__logo" src="{{ url_for('static', filename='images/dtech-logo.png') }}" alt="{{ company_name }} logo">
+      <span class="navbar__brand-text">D-TECH DYNAMICS</span>
+    </a>
+
+    <ul class="navbar__links">
+      {% for link in nav_links %}
+      <li>
+        <a class="navbar__link {% if request.endpoint == link.endpoint %}is-active{% endif %}"
+           href="{{ url_for(link.endpoint) }}">
+          {{ link.label }}
+        </a>
+      </li>
+      {% endfor %}
+      <li class="navbar__actions">
+        <a href="{{ url_for('main.contact') }}" class="btn btn-primary">Request Consultation</a>
+      </li>
+    </ul>
+
+    <button class="navbar__toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>

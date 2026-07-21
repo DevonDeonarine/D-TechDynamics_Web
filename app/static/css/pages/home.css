@@ -1,0 +1,161 @@
+/* ==========================================================================
+   Home Page — hero, intro, and featured-project styles specific to Home.
+   Shared card/section patterns (services, differentiators, CTA band)
+   live in static/css/shared.css so About and Services can reuse them.
+   ========================================================================== */
+
+/* ---- Hero ---- */
+.hero {
+  position: relative;
+  padding: 140px 0 96px;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(226, 31, 43, 0.10), transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(22, 217, 232, 0.14), transparent 50%);
+  pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+  max-width: 760px;
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-cyan);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.hero__title {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  margin-bottom: 20px;
+}
+
+.hero__title .accent {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero__subtitle {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  max-width: 620px;
+  margin-bottom: 36px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ---- Intro ---- */
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+}
+
+.intro__title {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  margin-bottom: 16px;
+}
+
+.intro__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.intro__stat {
+  padding: 24px;
+  text-align: center;
+}
+
+.intro__stat-value {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-cyan);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.intro__stat-label {
+  font-size: 0.85rem;
+  color: var(--color-text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ---- Featured projects ---- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 960px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.project-card__media {
+  height: 160px;
+  background: linear-gradient(135deg, rgba(226, 31, 43, 0.16), rgba(22, 217, 232, 0.16));
+  border-bottom: 1px solid var(--color-border);
+}
+
+.project-card__body {
+  padding: 24px;
+}
+
+.project-card__category {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-cyan);
+  margin-bottom: 10px;
+}
+
+.project-card__title {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.project-card__summary {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}

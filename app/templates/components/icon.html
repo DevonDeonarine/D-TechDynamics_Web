@@ -1,0 +1,42 @@
+{% macro icon(name, class="icon") %}
+{% if name == "shield" %}
+<svg class="{{ class }}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+{% elif name == "code" %}
+<svg class="{{ class }}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M9 8l-4 4 4 4M15 8l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+{% elif name == "consult" %}
+<svg class="{{ class }}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+</svg>
+{% elif name == "network" %}
+<svg class="{{ class }}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="12" cy="5" r="2" stroke="currentColor" stroke-width="1.6"/>
+  <circle cx="5" cy="18" r="2" stroke="currentColor" stroke-width="1.6"/>
+  <circle cx="19" cy="18" r="2" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M12 7v6M12 13l-6 4M12 13l6 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+</svg>
+{% elif name == "automation" %}
+<svg class="{{ class }}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M12 3v2.4M12 18.6V21M21 12h-2.4M5.4 12H3M18.1 5.9l-1.7 1.7M7.6 16.4l-1.7 1.7M18.1 18.1l-1.7-1.7M7.6 7.6L5.9 5.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+</svg>
+{% elif name == "cloud" %}
+<svg class="{{ class }}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M7 18h10a4 4 0 0 0 0-8 5.5 5.5 0 0 0-10.6-1.8A4.2 4.2 0 0 0 7 18z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+</svg>
+{% elif name == "check" %}
+<svg class="{{ class }}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/>
+  <path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+{% elif name == "arrow-right" %}
+<svg class="{{ class }}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+{% endif %}
+{% endmacro %}

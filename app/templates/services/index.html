@@ -1,0 +1,47 @@
+{% extends "layouts/base.html" %}
+{% from "components/icon.html" import icon %}
+
+{% block content %}
+
+{% set title = "Our Services" %}
+{% set eyebrow = "What We Do" %}
+{% set subtitle = "Six core disciplines, engineered to work together — from network foundations to the software running on top of them." %}
+{% include "components/page_header.html" %}
+
+<!-- Full Services Grid -->
+<section class="section">
+  <div class="container">
+    <div class="card-grid">
+      {% for service in services %}
+      <div class="service-card glass-panel">
+        <div class="service-card__icon">{{ icon(service.icon) }}</div>
+        <h3 class="service-card__title">{{ service.title }}</h3>
+        <p class="service-card__summary">{{ service.summary }}</p>
+        <ul class="service-card__features">
+          {% for feature in service.features %}
+          <li>{{ feature }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="cta-band glass-panel">
+      <h2 class="cta-band__title">Not Sure Which Service You Need?</h2>
+      <p class="cta-band__subtitle">
+        Most engagements span more than one discipline. Tell us what you're
+        working on and we'll help you figure out where to start.
+      </p>
+      <div class="cta-band__actions">
+        <a href="{{ url_for('main.contact') }}" class="btn btn-primary">Request Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

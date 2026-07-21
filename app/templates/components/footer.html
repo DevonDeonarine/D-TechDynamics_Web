@@ -1,0 +1,35 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">
+          <img class="footer__logo" src="{{ url_for('static', filename='images/dtech-logo.png') }}" alt="{{ company_name }} logo">
+          <span class="navbar__brand-text">D-TECH DYNAMICS</span>
+        </div>
+        <p class="footer__tagline">{{ company_tagline }}</p>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Navigate</h4>
+        <ul class="footer__links">
+          {% for link in nav_links %}
+          <li><a href="{{ url_for(link.endpoint) }}">{{ link.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Contact</h4>
+        <ul class="footer__links">
+          <li><a href="mailto:{{ company_email }}">{{ company_email }}</a></li>
+          <li><a href="tel:{{ company_phone }}">{{ company_phone }}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>&copy; 2026 {{ company_name }}. All rights reserved.</span>
+      <span>Forged in Fire &middot; Protected by Code</span>
+    </div>
+  </div>
+</footer>
