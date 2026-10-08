@@ -19,8 +19,8 @@ class Config:
     # Company info (used across templates)
     COMPANY_NAME = "D-Tech Dynamics"
     COMPANY_TAGLINE = "Forged in Fire. Protected by Code."
-    COMPANY_EMAIL = "contact@dtechdynamics.com"
-    COMPANY_PHONE = "+1 (000) 000-0000"
+    COMPANY_EMAIL = "D-TechDynamics@proton.me"
+    COMPANY_PHONE = "+1 (868) 358-0435"
 
     @staticmethod
     def init_app(app):
