@@ -162,34 +162,12 @@ def get_values():
 
 
 def get_team():
-    """Leadership team shown on the About page."""
+    """Founder shown on the About page."""
     return [
         {
-            "name": "Marcus Reyes",
-            "role": "Founder & Chief Executive Officer",
-            "bio": "Sets the technical vision and leads D-Tech's largest "
-                   "client engagements.",
-            "initials": "MR",
-        },
-        {
-            "name": "Elena Voss",
-            "role": "Head of Cybersecurity",
-            "bio": "Leads threat detection and penetration testing across "
-                   "every client environment.",
-            "initials": "EV",
-        },
-        {
-            "name": "Jamal Ortiz",
-            "role": "Lead Software Architect",
-            "bio": "Oversees platform architecture and engineering standards "
-                   "for custom builds.",
-            "initials": "JO",
-        },
-        {
-            "name": "Priya Nair",
-            "role": "Director of Cloud & Infrastructure",
-            "bio": "Runs cloud migrations and infrastructure automation "
-                   "engagements end to end.",
-            "initials": "PN",
+            "name": "Devon Deonarine",
+            "role": "Founder & Owner",
+            "bio": "Independently builds and delivers technology solutions through D-Tech Dynamics.",
+            "initials": "DD",
         },
     ]

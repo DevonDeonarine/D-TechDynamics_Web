@@ -37,7 +37,7 @@ def test_about_page_contains_team_and_values(client):
     response = client.get("/about")
     html = response.get_data(as_text=True)
     assert "Our Core Values" in html
-    assert "Marcus Reyes" in html
+    assert "Devon Deonarine" in html
 
 
 def test_services_page_contains_all_six_services(client):
